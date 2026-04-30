@@ -12,7 +12,7 @@ type MovieSectionProps = {
 
 export const MovieSection = ({ movies, title, link, loading }: MovieSectionProps) => {
   return (
-    <section className="mt-[50px]">
+    <section className="mt-12.5">
       <div className="container">
         <div className="flex justify-between items-center mb-8">
           <h2 className="font-semibold text-2xl text-[#09090B]">{title}</h2>
