@@ -16,7 +16,7 @@ export const MovieCard = ({ movie }: { movie: Movie }) => {
               strokeLinejoin="round"
             />
           </svg>
-          {movie.vote_average}/10
+          {movie.vote_average.toFixed(1)}/10
         </div>
         <div className="text-[#09090B] text-lg line-clamp-2 max-14 overflow-hidden">{movie.title}</div>
       </div>

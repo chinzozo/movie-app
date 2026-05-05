@@ -2,8 +2,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
+import { Movie } from "@/types";
+import { Star } from "../icons/star";
 
-export const Slides = () => {
+export const Slides = ({ movie }: { movie: Movie }) => {
   return (
     <Swiper
       autoplay={{ delay: 5000 }}
@@ -20,16 +22,8 @@ export const Slides = () => {
             <p className="text-white">Now Playing:</p>
             <h3 className="font-bold text-4xl text-white">Wicked 3</h3>
             <div className="py-2 flex items-center font-semibold text-white text-lg">
-              <svg width="28" height="48" viewBox="0 0 28 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M13.9997 10.3335L17.6047 17.6368L25.6663 18.8152L19.833 24.4968L21.2097 32.5235L13.9997 28.7318L6.78967 32.5235L8.16634 24.4968L2.33301 18.8152L10.3947 17.6368L13.9997 10.3335Z"
-                  fill="#FDE047"
-                  stroke="#FDE047"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              6.9<span className="text-base text-[#71717A] font-normal">/10</span>
+              <Star/>
+              {movie?.vote_average}<span className="text-base text-[#71717A] font-normal">/10</span>
             </div>
             <p className="w-75 text-[#FAFAFA] text-xs">
               Elphaba, a misunderstood young woman because of her green skin, and Glinda, a popular girl, become friends at Shiz University in the
